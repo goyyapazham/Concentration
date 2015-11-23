@@ -61,11 +61,86 @@ public class Concentration {
 	return retBoard;
     }
 
+    public String ready (){
+	String response = Keyboard.readString();
+	if (response.equals("Y")){
+	    return ("Then let's begin.\n");}
+	else{
+	    System.out.println ("Take your time...");
+		return ready ();}}
+	
+	
+
+    public void play(){
+	int score = 0;
+	int number = 0;
+	System.out.println ("Welcome to Concetration!");
+	System.out.println ("Please observe the letters below.");
+	for(int r = 0; r < 4; r++) {
+	    for(int c = 0; c < 4; c++) {
+		this._board[r][c].flip();}}
+	System.out.print (this);
+	System.out.println ("Got it memorized?(Y/N)");
+	System.out.print (ready ());
+        for(int r = 0; r < 4; r++) {
+	   for(int c = 0; c < 4; c++) {
+	       this._board[r][c].flip();}}
+	System.out.print (this);
+	while (score < 8){
+
+	     System.out.println ("\nPlease indicate the row of the first element.");
+	    int rowA = Keyboard.readInt();
+	    while (rowA > ( _board.length) || rowA <= 0){
+	          System.out.println ("That row does not exist. Try again.");
+	          rowA = Keyboard.readInt();}
+	          
+	    System.out.println ("\nPlease indicate the column of the first element.");
+	    int columnA = Keyboard.readInt();
+	    while (columnA > ( _board[0].length) || columnA <=0 ){
+	          System.out.println ("That column does not exist. Try again.");
+	          columnA = Keyboard.readInt();}
+	    _board[rowA][columnA].flip();
+	    System.out.print(this);
+	          
+	    System.out.println ("\nPlease indicate the row of the second element.");
+	    int rowB = Keyboard.readInt();
+	    while (rowB > ( _board.length) || rowB <= 0){
+	          System.out.println ("That row does not exist. Try again.");
+	          rowB = Keyboard.readInt();}
+	
+	    System.out.println ("\nPlease indicate the column of the second element.");
+	    int columnB = Keyboard.readInt();
+	    while (columnB > ( _board[0].length) || columnB <= 0){
+	          System.out.println ("That column does not exist. Try again.");
+	         columnB = Keyboard.readInt();}
+	    _board[rowB][columnB].flip();
+	    System.out.print(this);
+
+	    if ((rowA == rowB) && (columnA == columnB)){
+		    System.out.println ("You chose the same element twice. Try again.");}
+
+	    else if (_board[rowA][columnA].equals (_board[rowB][columnB])){
+		score += 1;
+		System.out.println ("Correct!");}
+	    else {
+		 _board[rowA][columnA].flip();
+		 _board[rowB][columnB].flip(); 
+		 System.out.println ("Wrong.");}
+	    System.out.println (this);}
+	System.out.println ("Game Over.");
+		
+	    
+
+    }
+	
+	
+	
+
     //DO NOT MODIFY main()
     public static void main(String[] args){
 	Concentration game = new Concentration();
-	System.out.print(game);
-	//game.play();
+	//System.out.print(game);
+	game.play();
     }
 
 }//end class Concentration

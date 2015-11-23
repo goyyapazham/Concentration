@@ -28,7 +28,7 @@ public class Tile {
 	if ( isFaceUp() )
 	    return _face;
 	else
-	    return _face; //changed for easier testing
+	    return "-X-";
     }
     
     //override equals method
@@ -45,6 +45,8 @@ public class Tile {
 		&& this.isFaceUp() == ((Tile)rightSide).isFaceUp();
 	return retVal;
     }
+
+
     
     public static void main(String [] args) {
 	Tile t1 = new Tile("cow");
