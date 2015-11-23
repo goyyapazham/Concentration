@@ -12,17 +12,17 @@ public class Concentration {
 
     //insert constructor and methods here
 
-    public Concentration {
+    public Concentration() {
         _board = setBoard();
 	_numberFaceUp = 0;
-	_words = { "a", "b", "c", "d", "e", "f", "g", "h" }
+	_words = new String[] { "a", "b", "c", "d", "e", "f", "g", "h" };
     }
 
     public Tile[][] setBoard() {
 
 	for(int r = 0; r < 4; r++) {
 	    for(int c = 0; c < 4; c++) {
-		_board[r][c] = _words[4*r + c];
+		_board[r][c].face = _words[4*r + c];
 	    }
 	}
 
@@ -46,12 +46,21 @@ public class Concentration {
 	a[r2][c2] = o2;
     }
 
-    
+    public String toString() {
+	String retBoard = "";
+	for(int r = 0; r < 4; r++) {
+	    for(int c = 0; c < 4; c++) {
+	        retBoard += _board[r][c] + "\t";
+	    }
+	    retBoard += "\n";
+	}
+    }
 
     //DO NOT MODIFY main()
     public static void main(String[] args){
 	Concentration game = new Concentration();
-	game.play();
+	System.out.print(game);
+	//game.play();
     }
 
 }//end class Concentration
