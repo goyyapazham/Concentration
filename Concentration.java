@@ -5,7 +5,7 @@ public class Concentration {
 
 //instance variables
 
-    private Tile[][] _board;     //storage for 4x4 grid of Tiles.
+    private Tile[][] _board = new Tile[4][4];     //storage for 4x4 grid of Tiles.
     private int _numberFaceUp;   //count of Tiles with faces visible
     private String[] _words;     //list of unique Strings used for Tile vals
     private static int _numRows = 4;
@@ -13,25 +13,29 @@ public class Concentration {
     //insert constructor and methods here
 
     public Concentration() {
-        _board = setBoard();
 	_numberFaceUp = 0;
 	_words = new String[] { "a", "b", "c", "d", "e", "f", "g", "h" };
+	_board = setBoard();
     }
 
     public Tile[][] setBoard() {
-
+	int index = 0;
 	for(int r = 0; r < 4; r++) {
 	    for(int c = 0; c < 4; c++) {
-		_board[r][c] = new Tile(_words[ 4 * r + c ]);
+		Tile t = new Tile (_words[index]);
+		_board[r][c] = t ;
+		index ++;
+	        if (index == 8){
+		    index = 0;}
 	    }
 	}
-
+	
 	int rand1 = (int)(Math.random() * 4);
 	int rand2 = (int)(Math.random() * 4);
 	
 	for(int r = 0; r < 4; r++) {
 	    for(int c = 0; c < 4; c++) {
-		swap(_board, r, c, rand1, rand2);
+	    swap(_board, r, c, rand1, rand2);
 	    }
 	}
 
