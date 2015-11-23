@@ -99,7 +99,7 @@ public class Concentration {
 	    while (columnA > ( _board[0].length) || columnA <=0 ){
 	          System.out.println ("That column does not exist. Try again.");
 	          columnA = Keyboard.readInt();}
-	    _board[rowA][columnA].flip();
+	    _board[rowA-1][columnA-1].flip();
 	    System.out.print(this);
 	          
 	    System.out.println ("\nPlease indicate the row of the second element.");
@@ -113,18 +113,18 @@ public class Concentration {
 	    while (columnB > ( _board[0].length) || columnB <= 0){
 	          System.out.println ("That column does not exist. Try again.");
 	         columnB = Keyboard.readInt();}
-	    _board[rowB][columnB].flip();
+	    _board[rowB-1][columnB-1].flip();
 	    System.out.print(this);
 
 	    if ((rowA == rowB) && (columnA == columnB)){
 		    System.out.println ("You chose the same element twice. Try again.");}
 
-	    else if (_board[rowA][columnA].equals (_board[rowB][columnB])){
+	    else if (_board[rowA-1][columnA-1].equals (_board[rowB-1][columnB-1])){
 		score += 1;
 		System.out.println ("Correct!");}
 	    else {
-		 _board[rowA][columnA].flip();
-		 _board[rowB][columnB].flip(); 
+		 _board[rowA-1][columnA-1].flip();
+		 _board[rowB-1][columnB-1].flip(); 
 		 System.out.println ("Wrong.");}
 	    System.out.println (this);}
 	System.out.println ("Game Over.");
