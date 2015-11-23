@@ -22,7 +22,7 @@ public class Concentration {
 
 	for(int r = 0; r < 4; r++) {
 	    for(int c = 0; c < 4; c++) {
-		_board[r][c].face = _words[4*r + c];
+		_board[r][c] = new Tile(_words[ 4 * r + c ]);
 	    }
 	}
 
@@ -54,6 +54,7 @@ public class Concentration {
 	    }
 	    retBoard += "\n";
 	}
+	return retBoard;
     }
 
     //DO NOT MODIFY main()

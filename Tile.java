@@ -9,9 +9,14 @@ public class Tile {
     private boolean _isFaceUp;
 
     //constructor
-    public Tile( String value ) {
-	_face = value;
+    public Tile() {
+	_face = "face";
 	_isFaceUp = false;
+    }
+    
+    public Tile( String value ) {
+	this();
+	_face = value;
     }
 
     public boolean isFaceUp() { return _isFaceUp; }
