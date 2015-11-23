@@ -19,26 +19,21 @@ public class Concentration {
     }
 
     public Tile[][] setBoard() {
-	int index = 0;
 	for(int r = 0; r < 4; r++) {
 	    for(int c = 0; c < 4; c++) {
-		Tile t = new Tile (_words[index]);
+		Tile t = new Tile (_words[(4 * r + c) % 8]);
 		_board[r][c] = t ;
-		index ++;
-	        if (index == 8){
-		    index = 0;}
 	    }
 	}
-	
-	int rand1 = (int)(Math.random() * 4);
-	int rand2 = (int)(Math.random() * 4);
 	
 	for(int r = 0; r < 4; r++) {
 	    for(int c = 0; c < 4; c++) {
-	    swap(_board, r, c, rand1, rand2);
+		int rand1 = (int)(Math.random() * 4);
+		int rand2 = (int)(Math.random() * 4);
+		swap(_board, r, c, rand1, rand2);
 	    }
 	}
-
+	
 	return _board;
 
     }
