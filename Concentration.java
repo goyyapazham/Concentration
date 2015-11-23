@@ -42,7 +42,7 @@ public class Concentration {
 	Object o1 = a[r1][c1];
 	Object o2 = a[r2][c2];
 	a[r1][c1] = o2;
-	a[r2][c2] = o2;
+	a[r2][c2] = o1;
     }
 
     public String toString() {
