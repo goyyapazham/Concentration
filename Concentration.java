@@ -1,5 +1,4 @@
 import cs1.Keyboard;  //if comfortable with Scanner, you may comment this out
-
 		
 public class Concentration {
 
@@ -122,4 +121,3 @@ public class Concentration {
     }
 
 }//end class Concentration
-
