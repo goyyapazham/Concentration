@@ -98,7 +98,6 @@ public class Concentration {
 	    }
 	}
 	return "You won! Great job.";
-	
     }
 
     public String toString() {

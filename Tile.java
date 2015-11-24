@@ -28,22 +28,13 @@ public class Tile {
 	if ( isFaceUp() )
 	    return _face;
 	else
-<<<<<<< HEAD
-<<<<<<< HEAD
 	    return "-X-"; //changed for easier testing
-=======
-	    return "-X-";
->>>>>>> 2a39e332983646ab25a226f51a2e46557657f3a6
-=======
-	    return "-X-"; //changed for easier testing
->>>>>>> bbb103f5b6c10329f5036447ef5f20ceeb1214c8
     }
     
     //override equals method
     public boolean equals( Object rightSide ) {
 	//First, check for aliasing.
 	boolean retVal = this == rightSide;
-
 	//Next, if this and input Object are different objects,
         if ( !retVal )
 	    //...check to see if input Object is a Tile
