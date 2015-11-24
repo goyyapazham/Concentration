@@ -116,7 +116,6 @@ public class Concentration {
 	Concentration game = new Concentration();
 	System.out.print(game);
 	game.play();
-	//game.play();
     }
 
 }//end class Concentration
