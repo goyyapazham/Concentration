@@ -142,6 +142,7 @@ public class Concentration {
     public static void main(String[] args){
 	Concentration game = new Concentration();
 	game.play();
+	
     }
 
 }//end class Concentration
