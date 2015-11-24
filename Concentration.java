@@ -15,7 +15,7 @@ public class Concentration {
     public Concentration() {
 	
 	_numberFaceUp = 0;
-	_words = new String[] { "a", "b", "c", "d", "e", "f", "g", "h" };
+	_words = new String[] { "cow", "dog", "cat", "bug", "pig", "ant", "fox", "rat" };
 	_board = setBoard();
 	
     }
