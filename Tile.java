@@ -29,10 +29,14 @@ public class Tile {
 	    return _face;
 	else
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    return "-X-"; //changed for easier testing
 =======
 	    return "-X-";
 >>>>>>> 2a39e332983646ab25a226f51a2e46557657f3a6
+=======
+	    return "-X-"; //changed for easier testing
+>>>>>>> bbb103f5b6c10329f5036447ef5f20ceeb1214c8
     }
     
     //override equals method
@@ -49,8 +53,6 @@ public class Tile {
 		&& this.isFaceUp() == ((Tile)rightSide).isFaceUp();
 	return retVal;
     }
-
-
     
     public static void main(String [] args) {
 	Tile t1 = new Tile("cow");
