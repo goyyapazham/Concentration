@@ -28,7 +28,7 @@ public class Tile {
 	if ( isFaceUp() )
 	    return _face;
 	else
-	    return _face; //changed for easier testing
+	    return "-X-"; //changed for easier testing
     }
     
     //override equals method
