@@ -1,3 +1,9 @@
+/*Team Obliviate: Nalanda Sharadjaya and James Cao
+  APCS1 pd9
+  HW36: Some Folks Call It A Memory
+  2015-11-23
+*/
+
 import cs1.Keyboard;  //if comfortable with Scanner, you may comment this out
 		
 public class Concentration {
