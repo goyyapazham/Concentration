@@ -97,7 +97,7 @@ public class Concentration {
 		play();
 	    }
 	}
-	return "You won! Great job.";
+	return "";
     }
 
     public String toString() {
@@ -115,7 +115,7 @@ public class Concentration {
     public static void main(String[] args){
 	Concentration game = new Concentration();
 	System.out.print(game);
-	System.out.println(game.play());
+	game.play();
 	//game.play();
     }
 
